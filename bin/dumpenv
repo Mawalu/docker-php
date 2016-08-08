@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+$env = [];
+
+foreach($_SERVER as $envName => $envVal) {
+  if(is_array($envVal)) { // argv is an array
+    continue;
+  }
+
+  $env[] = "$envName=\"$envVal\"";
+}
+
+echo implode(PHP_EOL, $env); 
