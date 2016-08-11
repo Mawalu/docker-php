@@ -3,8 +3,8 @@ stages:
   - release
 
 variables: 
-  CONTAINER_TEST_IMAGE: docker.mawalabs.de/mawalu/docker-php:$CI_BUILD_REF_NAME
-  CONTAINER_RELEASE_IMAGE: docker.mawalabs.de/mawalu/docker-php:latest
+  CONTAINER_TEST_IMAGE: docker.mawalabs.de/floggl/docker-php:$CI_BUILD_REF_NAME
+  CONTAINER_RELEASE_IMAGE: docker.mawalabs.de/floggl/docker-php:latest
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN docker.mawalabs.de
